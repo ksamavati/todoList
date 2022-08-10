@@ -1,22 +1,22 @@
 import React from 'react'
 
-const Todos = ({todos, deleteTodo}) => {
+const Todos = ({ todos, deleteTodo }) => {
     const todoList = todos.length ? (
         todos.map(todo => {
-            return(
+            return (
                 <div className="collection-item" key={todo.id}>
-                    <span onClick={() => {deleteTodo(todo.id)}}>{todo.content}</span>
+                    <span onClick={() => { deleteTodo(todo.id) }}>{todo.content}</span>
                 </div>
             )
         })
     ) : (
-        <p className="center">You have nothing left to do!</p>
+        <p className="center">You have nothing left to do!!</p>
     )
-  return (
-    <div className="todos collection">
-        {todoList}
-    </div>
-  )
+    return (
+        <div className="todos collection">
+            {todoList}
+        </div>
+    )
 }
 
 export default Todos;
